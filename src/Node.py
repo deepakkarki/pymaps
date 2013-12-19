@@ -2,17 +2,44 @@
 
 class Node(object):
 
-	def __init__(self, pid='', xpos=0.0, ypos=0.0, info={}):
+	def __init__(self, pid, xpos=0.0, ypos=0.0, info={}):
 		'''
 		Initializes a Node object -
 		pid (str): The point id, unique for a Node.
 		xpos,ypos (float): latitude - logitude resp.
+		info (dict) : extra attribute storage
 		'''
 		self.pid = pid
 		self.xpos = xpos
 		self.ypos = ypos
 		self.roads = []
 		self.info = info
+
+	def get_pid(self):
+		'''
+		returns pid of the Node
+		'''
+		return self.pid
+
+	def set_pid(self, pid):
+		'''
+		set the pid of the Node
+		pid (str) : unique identifier of the Node
+		'''
+		self.pid = pid
+
+	def set_pos(self,pos):
+		'''
+		sets x and y pos of the Node
+		pos (tuple of two floats) : holds (x,y) pos to be set
+		'''
+		self.xpos,self.ypos = pos
+
+	def get_pos(self):
+		'''
+		returns position of Node
+		'''
+		return self.xpos, self.ypos
 
 	def set_info(self, **info):
 		'''
