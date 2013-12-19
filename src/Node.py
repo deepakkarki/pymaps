@@ -21,6 +21,14 @@ class Node(object):
 		'''
 		return self.pid
 
+	def set_pos(self,pos):
+		'''
+		sets x and y pos of the Node
+		pos (tuple of two floats) : holds (x,y) pos to be set
+		'''
+		self.xpos,self.ypos = pos
+
+		
 	def set_pid(self, pid):
 		'''
 		set the pid of the Node
@@ -28,12 +36,6 @@ class Node(object):
 		'''
 		self.pid = pid
 
-	def set_pos(self,pos):
-		'''
-		sets x and y pos of the Node
-		pos (tuple of two floats) : holds (x,y) pos to be set
-		'''
-		self.xpos,self.ypos = pos
 
 	def get_pos(self):
 		'''
