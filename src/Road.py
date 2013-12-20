@@ -51,7 +51,7 @@ class Road(object):
         '''
         return self.wt
 
-    def set_info(self, **info):
+    def update_info(self, **info):
         '''
         set extra info in terms of kw args
         '''

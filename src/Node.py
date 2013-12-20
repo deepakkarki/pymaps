@@ -28,7 +28,7 @@ class Node(object):
 		'''
 		self.xpos,self.ypos = pos
 
-		
+
 	def set_pid(self, pid):
 		'''
 		set the pid of the Node
@@ -43,7 +43,7 @@ class Node(object):
 		'''
 		return self.xpos, self.ypos
 
-	def set_info(self, **info):
+	def update_info(self, **info):
 		'''
 		set/update the Node info
 		info is a key-word args param
