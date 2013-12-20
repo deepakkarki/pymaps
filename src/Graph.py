@@ -144,3 +144,12 @@ class Graph(object):
         else:
             self.road_tags[rid] = dict_of_info
 
+def get_angle(node1, node2):
+    from math import degrees, atan
+    x1 = node1.xpos
+    y1 = node1.ypos
+    x2 = node2.xpos
+    y2 = node2.ypos
+    if x1 == x2:
+        return 90
+    return degrees(atan((y2-y1)/(x2-x1)))
