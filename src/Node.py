@@ -2,7 +2,7 @@
 
 class Node(object):
 
-	def __init__(self, pid, xpos=0.0, ypos=0.0, info={}):
+	def __init__(self, pid, xpos=0.0, ypos=0.0, **info):
 		'''
 		Initializes a Node object -
 		pid (str): The point id, unique for a Node.
@@ -72,16 +72,16 @@ class Node(object):
 		(ie) the set of dest Nodes present in the roads list
 		'''
 		id_list = []
-        for road in self.roads:
-            id_list.append(road.get_dest_pid())
-        return id_list
+		for road in self.roads:
+			id_list.append(road.get_dest_pid())
+		return id_list
 
-    def get_children(self):
-    	'''
+	def get_children(self):
+		'''
 		returns a list of children references. 
 		(ie) the set of dest Nodes present in the roads list
 		'''
 		ref_list = []
-        for road in self.roads:
-            ref_list.append(road.dest)
-        return ref_list
+		for road in self.roads:
+			ref_list.append(road.dest)
+		return ref_list
