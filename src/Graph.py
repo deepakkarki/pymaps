@@ -2,7 +2,7 @@
 from xml.etree import ElementTree
 from Node import Node
 from Road import Road
-
+from rendering_rules import renderingRules
 import copy
 
 class Graph(object):
