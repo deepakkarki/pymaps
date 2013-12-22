@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
 import pylab as p
 
-def display(g, show=True):
+def display_raw(g, show=True):
 	fig = p.figure()
 	
-	for node in g.nodes.values():
+	for node in g.n_pid.values():
 		if len(node.roads) == 0:
 			p.plot(node.xpos,node.ypos, 'bo', color='blue')
 		elif len(node.roads) == 1:
