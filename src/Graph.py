@@ -37,8 +37,11 @@ class Graph(object):
 		'''
 		document = ElementTree.parse( src )
 		dimention = document.find( 'bounds' ).attrib
-		for stat in dimention:
-			dimention[stat] = float(dimention[stat])
+		try:
+			for stat in dimention:
+				dimention[stat] = float(dimention[stat])
+		except KeyError as ke:
+			pass
 		self.dimention = dimention
 
 		for user in document.findall( 'node' ):
