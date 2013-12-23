@@ -65,8 +65,10 @@ class Graph(object):
 			for i in way.getchildren():
 
 				if i.tag == 'nd': #if the child is a node
-					#add the node id to the list xyz, later after all children have been exhausted, link the nodes which belong to the road.
-					xyz.append(i.attrib['ref'])
+					#add the node id to the list xyz, later after all children have been exhausted, 
+					#link the nodes which belong to the road.
+					if i.attrib['ref'] in self.n_pid:
+						xyz.append(i.attrib['ref'])
 					
 				if i.tag == 'tag': #if the child is a tag containing info about the road
 					#then add the info_name as a key in the dict info, the corresponding value being the info_value
