@@ -12,7 +12,7 @@ def render(g):
 	ax = fig.add_subplot(111,autoscale_on=False,xlim=(minX,maxX),ylim=(minY,maxY))
 
 	for road in g.r_tag:
-		#road is the "rid", viz key in roadTags dictionary
+		#road is the "rid", viz key in r_tag dictionary
 		road_ref = g.r_tag[road]
 		#road_ref is the refrence to the value dictionary of the key rid in g.roadTags
 		node_list = road_ref['nodes']
