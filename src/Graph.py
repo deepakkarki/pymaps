@@ -40,7 +40,7 @@ class Graph(object):
 		try:
 			for stat in dimention:
 				dimention[stat] = float(dimention[stat])
-		except KeyError as ke:
+		except ValueError as ke:
 			pass
 		self.dimention = dimention
 
